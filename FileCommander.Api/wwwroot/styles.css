@@ -1,0 +1,203 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: #1e1e1e;
+    color: #f3f3f3;
+}
+
+.app-root {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-header {
+    padding: 8px 16px;
+    background: linear-gradient(to right, #2b2b2b, #333);
+    border-bottom: 1px solid #444;
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.panels-container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    padding: 4px;
+    background-color: #111;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #444;
+    background-color: #252526;
+}
+
+.panel.active {
+    border-color: #007acc;
+    box-shadow: 0 0 0 1px #007acc;
+}
+
+.panel-header {
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+    align-items: center;
+    background-color: #2d2d2d;
+    border-bottom: 1px solid #3c3c3c;
+}
+
+.drive-select,
+.path-input {
+    background-color: #1e1e1e;
+    color: #f3f3f3;
+    border: 1px solid #555;
+    padding: 2px 4px;
+    font-size: 12px;
+}
+
+.drive-select {
+    width: 80px;
+}
+
+.path-input {
+    flex: 1;
+}
+
+.panel-body {
+    flex: 1;
+    overflow: auto;
+}
+
+.entries-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+.entries-table thead {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    z-index: 1;
+}
+
+.entries-table th,
+.entries-table td {
+    padding: 2px 6px;
+    border-bottom: 1px solid #333;
+    white-space: nowrap;
+}
+
+.entries-table th.col-name,
+.entries-table td.col-name {
+    width: 60%;
+}
+
+.entries-table th.col-size,
+.entries-table td.col-size {
+    width: 15%;
+    text-align: right;
+}
+
+.entries-table th.col-date,
+.entries-table td.col-date {
+    width: 25%;
+}
+
+.entry-row {
+    cursor: default;
+}
+
+.entry-row:hover {
+    background-color: #3a3d41;
+}
+
+.entry-row.selected {
+    background-color: #094771;
+}
+
+.entry-name {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.entry-icon {
+    width: 14px;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.entry-icon.folder::before { content: "📁"; }
+.entry-icon.file::before { content: "📄"; }
+.entry-icon.file-text::before { content: "📄"; }
+.entry-icon.file-image::before { content: "🖼️"; }
+.entry-icon.file-audio::before { content: "🎵"; }
+.entry-icon.file-video::before { content: "🎬"; }
+.entry-icon.file-binary::before { content: "⚙️"; }
+
+.btn {
+    border: 1px solid #555;
+    background-color: #3a3d41;
+    color: #f3f3f3;
+    padding: 4px 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #45494e;
+}
+
+.btn-small {
+    padding: 2px 6px;
+}
+
+.btn-secondary {
+    background-color: #2d2d30;
+}
+
+.btn-danger {
+    background-color: #a1260d;
+    border-color: #a1260d;
+}
+
+.btn-danger:hover {
+    background-color: #c2361a;
+}
+
+.app-footer {
+    padding: 4px 8px;
+    background-color: #2d2d30;
+    border-top: 1px solid #3c3c3c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 12px;
+}
+
+.footer-buttons {
+    display: flex;
+    gap: 4px;
+}
+
+.footer-status {
+    flex: 1;
+    text-align: right;
+    color: #ccc;
+}
+

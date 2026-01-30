@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>File Commander</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="app-root">
+        <header class="app-header">
+            <h1>File Commander</h1>
+        </header>
+
+        <main class="panels-container">
+            <section class="panel" data-panel="left">
+                <div class="panel-header">
+                    <select class="drive-select"></select>
+                    <input class="path-input" type="text" readonly />
+                    <button class="btn btn-small btn-secondary up-button">↑</button>
+                </div>
+                <div class="panel-body">
+                    <table class="entries-table">
+                        <thead>
+                            <tr>
+                                <th class="col-name">Имя</th>
+                                <th class="col-size">Размер</th>
+                                <th class="col-date">Дата изменения</th>
+                            </tr>
+                        </thead>
+                        <tbody class="entries-body"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="panel" data-panel="right">
+                <div class="panel-header">
+                    <select class="drive-select"></select>
+                    <input class="path-input" type="text" readonly />
+                    <button class="btn btn-small btn-secondary up-button">↑</button>
+                </div>
+                <div class="panel-body">
+                    <table class="entries-table">
+                        <thead>
+                            <tr>
+                                <th class="col-name">Имя</th>
+                                <th class="col-size">Размер</th>
+                                <th class="col-date">Дата изменения</th>
+                            </tr>
+                        </thead>
+                        <tbody class="entries-body"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <div class="footer-buttons">
+                <button id="btn-copy" class="btn">F5 Копировать</button>
+                <button id="btn-move" class="btn">F6 Переместить</button>
+                <button id="btn-delete" class="btn btn-danger">F8 Удалить</button>
+            </div>
+            <div class="footer-status" id="status"></div>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
+
