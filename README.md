@@ -6,7 +6,7 @@
 
 ## Описание
 
-File Commander - это современное веб-приложение, состоящее из раздельных FrontEnd и BackEnd частей, взаимодействующих через HTTP API. Интерфейс визуально напоминает классические файловые менеджеры (Total Commander, Norton Commander, Midnight Commander, Far Manager).
+File Commander - веб-приложение, состоящее из раздельных FrontEnd и BackEnd частей, взаимодействующих через HTTP API. Интерфейс визуально напоминает классические файловые менеджеры (Total Commander, Norton Commander, Midnight Commander, Far Manager).
 
 ### Основные возможности
 
